@@ -3,7 +3,8 @@ pipeline{
 	stages{
 		stage('stape 1'){
 			steps{
-					echo 'welcome to pipeline'
+				sh 'make' 
+                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
 			}
 			
 		
