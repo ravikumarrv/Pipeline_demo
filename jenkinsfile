@@ -2,7 +2,10 @@ pipeline{
 	agent any 
 	stages{
 		stage('stape 1'){
-			echo "welcome to pipeline"	
+			steps{
+					echo 'welcome to pipeline'
+			}
+			
 		
 		}
 	
