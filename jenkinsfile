@@ -1,14 +1,12 @@
-pipeline{
-	agent any 
-	stages{
-		stage('stape 1'){
-			steps{
-				sh 'make' 
-                archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
-			}
-			
-		
-		}
-	
-	}
+pipeline {
+    agent {
+        docker { image 'node:14-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
