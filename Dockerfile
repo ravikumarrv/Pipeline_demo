@@ -1,3 +1,8 @@
-FROM node:14-alpine
+FROM ubuntu
 
-RUN apk add -U subversion
+RUN apt-get update && apt-get install -y \
+  bzr \
+  cvs \
+  git \
+  mercurial \
+  subversion
